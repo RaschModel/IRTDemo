@@ -38,7 +38,7 @@ output$IRF2 <- renderPlot({
   p<-c+(1-c)*(1/(1+exp(-a*(t-b))))
   p1<-c1+(1-c1)*(1/(1+exp(-a1*(t-b1))))
   p2<-c2+(1-c2)*(1/(1+exp(-a2*(t-b2))))
-  plot(t,p,ylim=c(0,1),main="Item Response Function",type="l",xlab=expression(paste("Person Location ",theta)),ylab="Probability of Correct Responses")
+  plot(t,p,ylim=c(0,1),main="Item Response Functions",type="l",xlab=expression(paste("Person Location ",theta)),ylab="Probability of Correct Responses")
   lines(t,p1,col="red")
   lines(t,p2,col="blue")
 })
