@@ -45,4 +45,42 @@ output$IRF2 <- renderPlot({
   lines(t,p2,col="red")
   lines(t,p3,col="blue")
 })
+  output$TCC <- renderPlot({
+  a1=input$a1
+  b1=input$b1
+  c1=input$c1
+  a2=input$a2
+  b2=input$b2
+  c2=input$c2
+  a3=input$a3
+  b3=input$b3
+  c3=input$c3
+  t<-seq(-4,4,by=.1)
+  p1<-c1+(1-c1)*(1/(1+exp(-a1*(t-b1))))
+  p2<-c2+(1-c2)*(1/(1+exp(-a2*(t-b2))))
+  p3<-c3+(1-c3)*(1/(1+exp(-a3*(t-b3))))
+  p<-p1+p2+p3
+  plot(t,p,ylim=c(0,3),main="Test Characteristic Curve",type="l",xlab=expression(paste("Person Location ",theta)),ylab="Sum of Probability of Correct Responses")
+})
+
+output$TIF <- renderPlot({
+  a1=input$a1
+  b1=input$b1
+  c1=input$c1
+  a2=input$a2
+  b2=input$b2
+  c2=input$c2
+  a3=input$a3
+  b3=input$b3
+  c3=input$c3
+  t<-seq(-4,4,by=.1)
+  p1<-c1+(1-c1)*(1/(1+exp(-a1*(t-b1))))
+  p2<-c2+(1-c2)*(1/(1+exp(-a2*(t-b2))))
+  p3<-c3+(1-c3)*(1/(1+exp(-a3*(t-b3))))
+  In1=a1^2*p1*(1-p1)
+  In2=a2^2*p2*(1-p2)
+  In3=a3^2*p3*(1-p3)
+  In<-In1+In2+In3
+  plot(t,In,main="Test Information Function",type="l",xlab=expression(paste("Person Location ",theta)),ylab="Test Information (Precision)")
+})
 })
