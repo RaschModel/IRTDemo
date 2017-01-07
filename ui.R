@@ -23,5 +23,5 @@ shinyUI(fluidPage(
       tabPanel("A Single Item/Person",plotOutput("IRF"),tags$br(),
                plotOutput("IIF"),tags$br(),plotOutput("PRF")),
       tabPanel("Three Items"))
-)
+))
 ))
