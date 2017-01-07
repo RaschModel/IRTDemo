@@ -24,7 +24,6 @@ output$PRF <- renderPlot({
   theta=input$theta
   delta<-seq(-4,4,by=.1)
   p<-c+(1-c)*(1/(1+exp(-a*(theta-delta))))
-  In=a^2*p*(1-p)
-  plot(delta,In,main="Person Response Function",type="l",xlab=expression(paste("Item Location ",delta)),ylab="Probability of Correct Responses")
+  plot(delta,p,main="Person Response Function",type="l",xlab=expression(paste("Item Location ",delta)),ylab="Probability of Correct Responses")
 })
 })
