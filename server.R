@@ -42,8 +42,8 @@ output$IRF2 <- renderPlot({
   p2<-c2+(1-c2)*(1/(1+exp(-a2*(t-b2))))
   p3<-c3+(1-c3)*(1/(1+exp(-a3*(t-b3))))
   plot(t,p1,ylim=c(0,1),main="Item Response Functions",col="orange",type="l",lwd=3,xlab=expression(paste("Person Location ",theta)),ylab="Probability of Correct Responses")
-  lines(t,p2,lwd=3,col="red")
-  lines(t,p3,lwd=3,col="blue")
+  lines(t,p2,lwd=3,col="blue")
+  lines(t,p3,lwd=3,col="red")
 })
 
 output$TCC <- renderPlot({
