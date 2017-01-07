@@ -44,6 +44,7 @@ output$IRF2 <- renderPlot({
   plot(t,p1,ylim=c(0,1),main="Item Response Functions",col="orange",type="l",lwd=3,xlab=expression(paste("Person Location ",theta)),ylab="Probability of Correct Responses")
   lines(t,p2,lwd=3,col="blue")
   lines(t,p3,lwd=3,col="red")
+  legend("topleft", legend=c("Item 1", "Item 2","Item 3"),col=c("orange","blue", "red"), lwd=3, cex=1.5,box.lty=0)
 })
 
 output$TCC <- renderPlot({
