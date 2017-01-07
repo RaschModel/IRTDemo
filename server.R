@@ -28,6 +28,9 @@ output$PRF <- renderPlot({
 })
 
 output$IRF2 <- renderPlot({
+  a=input$a
+  b=input$b
+  c=input$c
   a1=input$a1
   b1=input$b1
   c1=input$c1
