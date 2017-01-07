@@ -14,8 +14,8 @@ shinyUI(fluidPage(
                   max = 1,
                   value =0),
   sliderInput("theta","theta",
-              min = 0,
-              max = 1,
+              min = -3,
+              max = 3,
               value =0)
   ),
   mainPanel(
