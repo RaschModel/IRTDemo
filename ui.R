@@ -45,7 +45,7 @@ shinyUI(fluidPage(
   mainPanel(
     tabsetPanel(
       tabPanel("A Single Item/Person",plotOutput("IRF"),tags$br(),
-               plotOutput("IIF"),tags$br(),plotOutput("PRF")),
+               plotOutput("IIF"),tags$br(),plotOutput("PRF"),tags$br(),plotOutput("PIF")),
       tabPanel("Three Items",plotOutput("IRF2"),tags$br(),plotOutput("TCC"),tags$br(),plotOutput("TIF"))
 ))
 )))
