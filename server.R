@@ -26,6 +26,16 @@ output$PRF <- renderPlot({
   p<-c1+(1-c1)*(1/(1+exp(-a1*(theta-delta))))
   plot(delta,p,main="Person Response Function",type="l",lwd=3,xlab=expression(paste("Item Location ",delta)),ylab="Probability of Correct Responses")
 })
+  
+output$PIF <- renderPlot({
+  a1=input$a1
+  c1=input$c1
+  theta=input$theta
+  delta<-seq(-4,4,by=.1)
+  p<-c1+(1-c1)*(1/(1+exp(-a1*(theta-delta))))
+  In=a1^2*p*(1-p)
+  plot(t,In,main="Person Information Function",type="l",lwd=3,xlab=expression(paste("Item Location ",theta)),ylab="Information (Precision)")
+})
 
 output$IRF2 <- renderPlot({
   a1=input$a1
